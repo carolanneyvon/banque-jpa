@@ -44,7 +44,7 @@ public class Client {
 	private Banque banque;
 	
 	@ManyToMany
-	@JoinTable(name = "LIEN_CLIENT_COMPTE", 
+	@JoinTable(name = "LIEN_COMPTE_CLIENT", 
 		joinColumns = @JoinColumn(name = "ID_CLIENT", referencedColumnName = "ID"), 
 		inverseJoinColumns = @JoinColumn(name = "ID_COMPTE", referencedColumnName = "ID"))
 	private List<Compte> comptes = new ArrayList<Compte>();
